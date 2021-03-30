@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ConferenceDemoApplication {
 
 	public static void main(String[] args) {
-		//Spring Boot adds this App Class and main method auto
+		//Spring Boot adds this App Class and main method automatically
 		SpringApplication.run(ConferenceDemoApplication.class, args);
 	}
 }
