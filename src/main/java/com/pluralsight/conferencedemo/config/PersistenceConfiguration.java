@@ -19,7 +19,9 @@ public class PersistenceConfiguration {
     /* Any methods in here can rtn bean defs that get stored in the Spring contxt */
 
     //How2 override data src bean provided by Spring from the Spring JPA starter
-    @Bean
+    //This hard coded Bean and the localhost db won't work when deploying to the cloud. The localhost db doesn't exist
+    // in the cloud.
+    /*@Bean
     public DataSource dataSource() {
         //when rtns the data src obj, spring attempts to find one already in the Spring context.
         //if one already exists in the Spring context, Spring will replace the pre-existing data src w/ this 1
@@ -31,10 +33,10 @@ public class PersistenceConfiguration {
         builder.password("Welcome");
 
         //These didn't work when ran Jar file from cmd line
-        /*builder.url(dataSrcUrl);
+        *//*builder.url(dataSrcUrl);
         builder.username(dbUsername);
-        builder.password(dbPassword);*/
+        builder.password(dbPassword);*//*
         System.out.println("Custom datasrc bean has been init'd and set. ");
         return builder.build();
-    }
+    }*/
 }
